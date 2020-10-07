@@ -51,7 +51,7 @@ class _SpinState extends State<Spin> with SingleTickerProviderStateMixin{
               Center(
                 child: Text('Tap here',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold
                 )
                 )
