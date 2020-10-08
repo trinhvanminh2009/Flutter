@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:my_app/base/ListItem.dart';
+import 'package:my_app/list/ListItem.dart';
 
 class HeadingItem implements ListItem{
   final String heading;

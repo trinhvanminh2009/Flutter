@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/list/HeaderItem.dart';
+import 'package:my_app/list/ListItem.dart';
+import 'package:my_app/list/MessageItem.dart';
 import 'spin.dart';
-import 'base/List.dart';
+import 'list/List.dart';
 void main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Scaffold(
       body: MyApp(),
+
 
     ),
   ));
@@ -101,6 +105,17 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
+            Container(
+              height: 400,
+              child: ListText(
+                items: List<ListItem>.generate(
+                  10000,
+                      (i) => i %6 == 0 ? HeadingItem("Heading $i") : MessageItem("Sender $i", "Message body $i"),
+                ),
+              ),
+
+            ),
+
             Padding(
               child: Spin(),
               padding: EdgeInsets.fromLTRB(30, 40, 30, 40)
