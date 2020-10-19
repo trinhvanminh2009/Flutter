@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/api/apiPage.dart';
 
 class AnimationPage extends StatefulWidget {
   @override
@@ -18,9 +19,9 @@ class AnimationPageState extends State<AnimationPage>
           boxShadow: const <BoxShadow>[
             BoxShadow(
               color: Color(0x66666666),
-              blurRadius: 10.0,
+              blurRadius: 40.0,
               spreadRadius: 3.0,
-              offset: Offset(0, 6.0),
+              offset: Offset(0, 10.0),
             )
           ]),
       end: BoxDecoration(
@@ -91,6 +92,37 @@ class AnimationPageState extends State<AnimationPage>
                 padding: EdgeInsets.all(10),
                 child: Image.asset('images/robot.png'),
               ),
+            ),
+          ),
+          Center(
+            child: Padding(
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ApiPage()));
+                },
+                child: DecoratedBoxTransition(
+                  position: DecorationPosition.background,
+                  decoration: decorationTween.animate(_controller),
+                  child: Container(
+                      width: 200,
+                      height: 200,
+                      padding: EdgeInsets.all(10),
+                      child: Wrap(
+                          spacing: 8.0, // gap between adjacent chips
+                          runSpacing: 4.0, // gap between lines
+                          children: <Widget>[
+                        Image.asset('images/crab.png'),
+
+                        Chip(
+                          avatar: CircleAvatar(backgroundColor: Colors.blue.shade900, child: Text('GT')),
+                          label: Text('Go to Api'),
+
+                        )
+                      ])),
+                ),
+              ),
+              padding: EdgeInsets.fromLTRB(0, 30, 0, 30),
             ),
           )
         ],
