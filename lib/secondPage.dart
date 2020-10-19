@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/AnimationPage.dart';
 import 'package:universal_widget/universal_widget.dart';
 
 class SecondPage extends StatefulWidget {
@@ -28,11 +29,11 @@ class SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Second page"),
+      ),
       body: ListView(
         children: [
-          AppBar(
-            title: Text("Second page"),
-          ),
           Center(child: CircularProgressIndicator()),
           UniversalWidget(
               x: 20,
@@ -67,7 +68,8 @@ class SecondPageState extends State<SecondPage> {
             child: InkWell(
               splashColor: Colors.red.withAlpha(30),
               onTap: () {
-                print('Card tapped');
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AnimationPage()));
               },
               borderRadius: BorderRadius.circular(20),
               child: Container(

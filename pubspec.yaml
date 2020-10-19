@@ -46,6 +46,16 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - images/qr_code.png
+    - images/2.0x/qr_code.png
+    - images/3.0x/qr_code.png
+    - images/crab.png
+    - images/2.0x/crab.png
+    - images/3.0x/crab.png
+    - images/robot.png
+    - images/2.0x/robot.png
+    - images/3.0x/robot.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
