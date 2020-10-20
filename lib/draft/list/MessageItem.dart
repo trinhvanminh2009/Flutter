@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:my_app/list/ListItem.dart';
+import 'package:my_app/draft/list/ListItem.dart';
 
 class MessageItem implements ListItem{
   final String sender;

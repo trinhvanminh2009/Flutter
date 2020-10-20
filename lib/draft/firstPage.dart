@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/list/HeaderItem.dart';
-import 'package:my_app/list/ListItem.dart';
-import 'package:my_app/list/MessageItem.dart';
-import 'package:my_app/secondPage.dart';
-import 'spin.dart';
+import 'package:my_app/draft/list/HeaderItem.dart';
+import 'package:my_app/draft/list/ListItem.dart';
+import 'package:my_app/draft/list/MessageItem.dart';
+import 'package:my_app/draft/secondPage.dart';
 import 'list/List.dart';
+import 'spin.dart';
+
 
 class FirstPage extends StatefulWidget{
 
@@ -36,7 +37,7 @@ class _FistPageState extends State<FirstPage>{
     // TODO: implement build
     return Scaffold(
       body: ListView(
-        // Column is also a layout widget. It takes a list of children and
+        // Column is also a layout widget. It takes a draft.list of children and
         // arranges them vertically. By default, it sizes itself to fit its
         // children horizontally, and tries to be as tall as its parent.
         //

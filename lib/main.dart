@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/firstPage.dart';
-import 'package:my_app/list/HeaderItem.dart';
-import 'package:my_app/list/ListItem.dart';
-import 'package:my_app/list/MessageItem.dart';
-import 'spin.dart';
-import 'list/List.dart';
+import 'package:my_app/draft/firstPage.dart';
+
 
 void main() async {
   runApp(MaterialApp(

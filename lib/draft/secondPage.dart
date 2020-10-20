@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/AnimationPage.dart';
+import 'package:my_app/draft/AnimationPage.dart';
 import 'package:universal_widget/universal_widget.dart';
 
 class SecondPage extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/api/photo.dart';
+import 'package:my_app/draft/api/photo.dart';
 
 class PhotoList extends StatefulWidget {
   final List<Photo> photos;
