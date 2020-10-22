@@ -1,12 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/src/models/item_model.dart';
+import 'package:my_app/src/ui/movie_item.dart';
 import '../blocs/movies_bloc.dart';
+import 'movie_category.dart';
 
 class MovieList extends StatefulWidget {
   final String movieType;
 
   const MovieList({Key key, this.movieType}) : super(key: key);
+
+
 
   @override
   MovieListState createState() => MovieListState();
@@ -25,7 +29,10 @@ class MovieListState extends State<MovieList> {
       itemBuilder: (BuildContext context, int index) {
         return InkWell(
             onTap: () {
-              print(snapshot.data.results[index].id);
+              print(snapshot.data.results[index].id.toString());
+              Navigator.of(context, rootNavigator: true).push(
+                  MaterialPageRoute(builder: (context) =>  MovieItemUI(id :snapshot.data.results[index].id)));
+
             },
             child: Card(
                 child: Column(
