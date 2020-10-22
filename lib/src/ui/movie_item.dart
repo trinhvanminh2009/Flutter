@@ -23,7 +23,7 @@ class MovieItemState extends State<MovieItemUI> {
 
   Widget buildMovieItem(AsyncSnapshot<MovieItem> snapshot) {
     String posterPath =
-        "https://image.tmdb.org/t/p/w185${snapshot.data.poster_path}";
+        "https://image.tmdb.org/t/p/w500${snapshot.data.poster_path}";
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     var releaseDate =
