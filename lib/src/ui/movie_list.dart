@@ -2,13 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/src/models/item_model.dart';
 import 'package:my_app/src/ui/movie_item.dart';
+
 import '../blocs/movies_bloc.dart';
-import 'movie_category.dart';
+
 
 class MovieList extends StatefulWidget {
   final String movieType;
+  final String searchKeyword;
 
-  const MovieList({Key key, this.movieType}) : super(key: key);
+  const MovieList({Key key, this.movieType, this.searchKeyword }) : super(key: key);
 
 
 
@@ -63,7 +65,12 @@ class MovieListState extends State<MovieList> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    bloc.fetchAllMovies(widget.movieType);
+    if(widget.movieType != null){
+      bloc.fetchAllMovies(widget.movieType);
+    }
+    if(widget.searchKeyword != null){
+
+    }
     return MaterialApp(
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,

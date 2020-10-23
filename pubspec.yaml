@@ -60,6 +60,7 @@ flutter:
     - images/robot.png
     - images/2.0x/robot.png
     - images/3.0x/robot.png
+    - images/drawer_header_background.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

@@ -1,6 +1,5 @@
 import 'package:my_app/src/models/item_model.dart';
 import 'package:my_app/src/models/movie_item.dart';
-import 'package:my_app/src/models/result.dart';
 import 'package:my_app/src/resources/repository.dart';
 import 'package:rxdart/rxdart.dart';
 

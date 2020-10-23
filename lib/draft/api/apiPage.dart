@@ -6,7 +6,6 @@ import 'package:http/http.dart' as http;
 import 'package:my_app/draft/api/photo.dart';
 import 'package:my_app/draft/api/photoList.dart';
 
-
 import 'album.dart';
 
 class ApiPage extends StatefulWidget {
