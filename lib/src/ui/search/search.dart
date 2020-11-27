@@ -1,7 +1,10 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/src/models/item_search.dart';
 import 'package:my_app/src/ui/menu/app_drawer.dart';
+import 'package:my_app/src/ui/search/bar_chart_1.dart';
+import 'package:my_app/src/ui/search/ordinal_bar_chart.dart';
 
 import '../../blocs/search_movie_bloc.dart';
 class Search extends StatefulWidget {
@@ -39,7 +42,20 @@ class SearchState extends State<Search> {
                 return Center(child: Text("No result found"));
               }
             }else{
-              return Center(child: Text("Let's find some movies"));
+              return Center(child: ListView(
+                children: [
+                  Padding(
+                    child: BarChartSample1(),
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 30),
+                  ),
+                  SizedBox(
+                    height: 400,
+                    width: 200,
+                    child: OrdinalComboBarLineChart(),
+                  ),
+
+                ],
+              ));
             }
 
           },

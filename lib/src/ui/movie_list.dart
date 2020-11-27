@@ -5,14 +5,12 @@ import 'package:my_app/src/ui/movie_item.dart';
 
 import '../blocs/movies_bloc.dart';
 
-
 class MovieList extends StatefulWidget {
   final String movieType;
   final String searchKeyword;
 
-  const MovieList({Key key, this.movieType, this.searchKeyword }) : super(key: key);
-
-
+  const MovieList({Key key, this.movieType, this.searchKeyword})
+      : super(key: key);
 
   @override
   MovieListState createState() => MovieListState();
@@ -32,9 +30,9 @@ class MovieListState extends State<MovieList> {
         return InkWell(
             onTap: () {
               print(snapshot.data.results[index].id.toString());
-              Navigator.of(context, rootNavigator: true).push(
-                  MaterialPageRoute(builder: (context) =>  MovieItemUI(id :snapshot.data.results[index].id)));
-
+              Navigator.of(context, rootNavigator: true).push(MaterialPageRoute(
+                  builder: (context) =>
+                      MovieItemUI(id: snapshot.data.results[index].id)));
             },
             child: Card(
                 child: Column(
@@ -65,12 +63,10 @@ class MovieListState extends State<MovieList> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    if(widget.movieType != null){
+    if (widget.movieType != null) {
       bloc.fetchAllMovies(widget.movieType);
     }
-    if(widget.searchKeyword != null){
-
-    }
+    if (widget.searchKeyword != null) {}
     return MaterialApp(
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
